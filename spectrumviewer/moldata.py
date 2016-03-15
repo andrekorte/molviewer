@@ -2,6 +2,8 @@
 '''
 This module contains atomic data and conversion factors.
 
+Most of this data is from PyQuante.
+https://github.com/rpmuller/pyquante2
 '''
 bohr2angstrom = 0.529177249
 angstrom2meter = 1e-10
