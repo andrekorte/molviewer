@@ -22,13 +22,14 @@ class BaseParser(object):
     def __init__(self):
         pass
 
+
 class XyzParser(object):
     def __init__(self, source):
         if isinstance(source, str):
             self.filename = source
         if hasattr(source, 'read'):
             print('Banana')
-    
+
     def __str__(self):
         '''Return a string representation of the object.'''
         return 'XYZ format file {:s}'.format(self.filename)

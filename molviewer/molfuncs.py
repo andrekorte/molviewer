@@ -23,7 +23,7 @@ def moleculeinfo(mol):
     for i, b in enumerate(mol.bonds()):
         bonddict[i] = b.asdict()
     data = {
-            'General': {
+        'General': {
             'File': mol.filename,
             'Name': mol.name,
             'Mass': mol.mass(),
@@ -31,9 +31,10 @@ def moleculeinfo(mol):
             'Charge': mol.charge,
             'Formula': mol.stoichiometry()
             },
-            'Bond table': [{'ishbond': b.ishbond, 'Atoms': b.atoms} for b in mol.bonds()]
-           }
+        'Bond table': [{'ishbond': b.ishbond, 'Atoms': b.atoms} for b in mol.bonds()]
+        }
     return data
+
 
 #
 # geometrical functions
@@ -56,6 +57,7 @@ def distance_matrix(mol):
         for j, atj in enumerate(atoms):
             mat[i, j] = ati.distance(atj)
     return mat
+
 
 def unit_vector(v):
     '''Returns the unit vector of vector v

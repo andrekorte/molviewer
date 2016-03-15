@@ -6,6 +6,7 @@ from random import randint
 from moldata import spectrumcolors
 from jcamp import JCAMP_reader
 
+
 class Spectrum(object):
     def __init__(self, filename):
         dictionary = JCAMP_reader(filename)

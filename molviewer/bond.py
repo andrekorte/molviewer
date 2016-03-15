@@ -62,6 +62,6 @@ class Bond(object):
         '''Return length of bond.
 
         :returns: float -- The euclidian distance.
-        
+
         '''
         return self.atoms[0].distance(self.atoms[1])

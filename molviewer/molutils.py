@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 # This function is used to find the symmetry of a molecule in
 # function find_symmetry.
 # For other comparisons use np.isclose.

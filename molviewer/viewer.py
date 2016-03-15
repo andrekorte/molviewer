@@ -179,7 +179,6 @@ class MolViewer(QtGui.QMainWindow):
         self.parametertree = ParameterTree()
         self.viewwidget = gl.GLViewWidget()
 
-
         widget = QtGui.QWidget()
         hbox = QtGui.QHBoxLayout(widget)
         hbox.addWidget(self.parametertree)
@@ -389,13 +388,13 @@ class MolViewer(QtGui.QMainWindow):
 
     def setparameter(self, mol):
             params = [
-                    {'name': mol.name, 'type': 'group', 'children': [
+                {'name': mol.name, 'type': 'group', 'children': [
                     {'name': 'File', 'type': 'str', 'value': mol.filename, 'readonly': True},
                     {'name': 'Formula', 'type': 'str', 'value': mol.stoichiometry(), 'readonly': True},
                     {'name': 'Mass', 'type': 'float', 'value': mol.mass(), 'readonly': True},
                     {'name': 'Electrons', 'type': 'int', 'value': mol.nel(), 'readonly': True},
                     {'name': 'Charge', 'type': 'float', 'value': mol.charge, 'readonly': True}]
-                    }]
+                }]
 
             p = Parameter.create(name='Molecule', type='group', children=params)
             self.parametertree.setParameters(p, showTop=True)

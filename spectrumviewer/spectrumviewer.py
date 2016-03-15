@@ -79,7 +79,6 @@ class SpectrumViewer(QtGui.QMainWindow):
             self.removespectrumAction.setShortcut('Ctrl + R')
             self.removespectrumAction.triggered.connect(self.removespectrum)
 
-
             # Toolbars
             self.filetoolbar = self.addToolBar('File')
             self.filetoolbar.addAction(self.newAction)
@@ -182,7 +181,7 @@ class SpectrumViewer(QtGui.QMainWindow):
         def saveimage(self):
             pass
 
-        def draw(self,spectrum):
+        def draw(self, spectrum):
             '''Draw a new spectrum.
 
             :param spectrum: The spectrum to draw.
@@ -224,13 +223,13 @@ class SpectrumViewer(QtGui.QMainWindow):
             ind = self.spectra.index(spectrum)
             spectrum.color = spectrumcolors[ind]
             params = [
-                    {'name': spectrum.title, 'type': 'group', 'children': [
+                {'name': spectrum.title, 'type': 'group', 'children': [
                     {'name': 'Number', 'type': 'int', 'value': self.spectra.index(spectrum)},
                     {'name': 'Color', 'type': 'color', 'value': spectrum.color},
                     {'name': 'Visible', 'type': 'bool', 'value': True},
                     {'name': 'Action Parameter', 'type': 'action'},
                     {'name': 'Spectrum', 'type': 'str', 'value': spectrum, 'visible': False}]
-                    }]
+                }]
 
             p = Parameter.create(name='Files', type='group', children=params)
             p.sigTreeStateChanged.connect(self.change)
@@ -261,9 +260,9 @@ class SpectrumViewer(QtGui.QMainWindow):
                     self.spectra[index].color = param.value()
 
                 if param.name() == 'Visible':
-                    if data == False:
+                    if data is False:
                         self.plots[index].clear()
-                    elif data == True:
+                    elif data is True:
                         self.plots[index].setData(self.spectra[index].x, self.spectra[index].y)
 
 

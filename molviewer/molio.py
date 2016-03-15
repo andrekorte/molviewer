@@ -11,6 +11,7 @@ from molecule import Molecule
 from moldata import sym2no
 from config import data_dir, valid_extensions
 
+
 ####################
 # Read files
 ####################
