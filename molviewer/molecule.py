@@ -4,9 +4,9 @@ This module contains the Molecule class.
 
 '''
 import numpy as np
-from bond import Bond
-from moldata import symbol, bohr2angstrom
-from atom import Atom
+from .bond import Bond
+from .moldata import symbol, bohr2angstrom
+from .atom import Atom
 
 
 class Molecule(object):

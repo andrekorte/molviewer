@@ -1,7 +1,7 @@
 import unittest
 
-from atom import Atom
-from molecule import Molecule
+from molviewer.atom import Atom
+from molviewer.molecule import Molecule
 import numpy as np
 
 

@@ -4,7 +4,7 @@ This module contains the Atom class
 
 '''
 import numpy as np
-from moldata import radius, name, sym2no, symbol, mass, floatcolor
+from .moldata import radius, name, sym2no, symbol, mass, floatcolor
 
 
 class Atom(object):
