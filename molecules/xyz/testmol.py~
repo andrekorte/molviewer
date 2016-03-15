@@ -1,0 +1,7 @@
+from molio import read_xyz
+
+mol = read_xyz('xyz/h2o.xyz')
+
+print mol.bonds()
+
+print 'ass'

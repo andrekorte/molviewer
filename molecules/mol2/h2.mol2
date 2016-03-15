@@ -1,0 +1,10 @@
+@<TRIPOS>MOLECULE
+hydrogen molecule
+ 2 0 0 0 0
+SMALL
+GASTEIGER
+
+@<TRIPOS>ATOM
+      1 H           0.0000    0.0000    0.3670 H       1  UNK1        0.0000
+      2 H           0.0000    0.0000   -0.3670 H       2  UNK2        0.0000
+@<TRIPOS>BOND

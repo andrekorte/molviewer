@@ -1,0 +1,9 @@
+#
+# helper functions
+#
+def is_close(i, j, tolerance=0.5):
+    """
+    Returns true if |i - j| is within tolerance.
+    """
+    return abs(i - j) <= tolerance
+
